@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Typing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cosmic-background">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🌌 Cosmic Typing Game</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span id="current-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">High Score:</span>
+                    <span id="high-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Streak:</span>
+                    <span id="streak">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-modes">
+            <button class="mode-btn active" data-mode="easy">🟢 Easy</button>
+            <button class="mode-btn" data-mode="medium">🟡 Medium</button>
+            <button class="mode-btn" data-mode="hard">🔴 Hard</button>
+        </div>
+
+        <div class="game-area" id="game-area">
+            <div class="falling-words-container" id="falling-words"></div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="word-input" placeholder="Type the falling words..." autocomplete="off" spellcheck="false">
+            <div class="game-controls">
+                <button id="start-btn" class="control-btn">🚀 Start Game</button>
+                <button id="pause-btn" class="control-btn" disabled>⏸️ Pause</button>
+                <button id="reset-btn" class="control-btn">🔄 Reset</button>
+            </div>
+        </div>
+
+        <div class="game-status" id="game-status">
+            <p>Press Start to begin your cosmic typing adventure!</p>
+        </div>
+
+        <div class="game-over-modal" id="game-over-modal">
+            <div class="modal-content">
+                <h2>🌟 Game Over!</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <p id="new-high-score" class="hidden">🎉 New High Score!</p>
+                <button id="play-again-btn" class="control-btn">🚀 Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="developer-credit">
+        <p>🚀 Developed by <strong>Hirachand</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
